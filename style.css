@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: rgba(255, 255, 255, 0.83);
+
+  --base-color: 194;
+  --primary-color: hsl(var(--base-color), 9%, 89%);
+  --primary-alternative-color: hsla(var(--base-color), 97%, 31%, 0.9);
+
+  font-size: 62.5%;
+  --text-color: hsla(var(--base-color), 6%, 21%, 1);
+
+  --ff-primary: 'Roboto', sans-serif;
+
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  font-family: var(--ff-primary);
+  font-size: 1.6rem;
+
+  display:grid;
+  
+  min-height: 100vh;
+}
+
+header {
+  justify-self: end;
+  align-self: top;
+
+  padding: 4rem 4rem 0 0;
+}
+
+.mode { 
+  background-color: transparent; 
+
+  border: none; 
+
+  cursor: pointer;
+}
+
+
+.mode svg path {
+  fill: var(--text-color);
+}
+
+.bg-mode {
+  background-color: rgba(0, 0, 0, 0.967);
+}
+
+.theme-mode svg path {
+  fill: var(--bg-color);
+}
+
+.hide {
+  display: none;
+}
+
+/*button svg{
+  width: clamp(3.2rem, 2rem + 42vw + 6.4rem);
+}*/
+
+main {
+
+  display: flex;
+
+  gap: clamp(1rem, 1rem + 5vw, 19.2rem);
+
+  align-items: center;
+  justify-content: center;
+
+}
+
+.on-set .set{
+  background-color: var(--primary-alternative-color);
+  color:white;
+}
+
+.on-card .card{
+  background-color: var(--primary-alternative-color);
+}
+
+.on-icon svg path  {
+  fill: white;
+}
+
+.time {
+  font-size: clamp(5rem, 5rem + 5vw, 12.6rem);
+  line-height: clamp(5rem, 5rem + 5vw, 14.8rem);
+
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.controls {
+
+  margin-top: clamp(4rem, 4rem + 30vw, 6rem);
+  margin-bottom: clamp(2rem, 2rem + 20vw, 3.8rem);
+  display: flex;
+  gap: clamp(2rem, 2rem + 5vw, 4rem);
+  align-items: center;
+  justify-content: center;
+}
+
+.controls svg {
+  width: clamp(3rem, 2rem + 3vw, 6.8rem);
+ 
+}
+
+.comands {
+  background: transparent;
+  border:none;
+
+  cursor:pointer;
+}
+
+.set {
+  background-color: var(--primary-color);
+
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  width: clamp(6rem, 5rem + 10vw, 13.8rem);
+  height: clamp(2rem, 2rem + 10vw, 5.2rem);
+
+  border:none;
+  border-radius:2.4rem;
+  cursor: pointer;
+}
+
+.wrapper-set {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#music {
+  display:grid;
+  gap:  clamp(1rem, 1rem + 5vw, 3.2rem);
+  grid-template-areas:
+  "A B"
+  "C D";
+}
+
+.card {
+  background-color: var(--primary-color);
+
+  width: clamp(6rem, 5rem + 10vw, 13.8rem);
+  height: clamp(6rem, 5rem + 10vw, 15.2rem);
+
+  border:none;
+  border-radius:2.4rem;
+
+  position: relative;
+
+  cursor: pointer;
+
+}
+
+.card svg {
+
+ width: clamp(1rem, 1rem + 20vw, 7.6rem);
+ height: clamp(1rem, 1rem + 20vh, 7rem);
+
+ position: absolute;
+
+ left: clamp(1rem, 1rem + 1vw, 4rem);
+ bottom: clamp(1rem, 1rem + 2vw, 4rem);
+}
+
+#forest {
+  grid-area: A;
+}
+
+#rain {
+  grid-area: B;
+ 
+
+}
+
+#cafeteria {
+  grid-area: C;
+
+}
+
+#fireplace {
+  grid-area: D;
+
+}
+
+/* Link Layout Figma: https://www.figma.com/file/thwuYat3It8wdojwrVKe2a/Stage-05---Focus-Timer-2.0-(Copy)?node-id=0%3A1 */
+
